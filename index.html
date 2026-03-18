@@ -45,15 +45,19 @@
             <img class="title" src="imgs/popcat.svg" alt="POPCAT!">
             <div class="cat-img" id="p">0</div>
         </div>
+        
         <div class="container" id="p2"></div>
+
         <script>
             let count = 0;
             let catImg = document.getElementById('p');
+            let audioElement = new Audio("pops/pop1.mp3");
 
             function addCount(){
                 count++;
                 catImg.innerHTML = count;
                 catImg.id = 'op';
+                audioElement.play();
             }
             let close = () => {
                 catImg.id = 'p';
